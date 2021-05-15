@@ -1,0 +1,19 @@
+<h1>Kittens</h1>
+<%= render 'layouts/notice' %>
+
+<div class="sect">
+  <% @kittens.each do |kitten| %>
+    <p class="border-bottom">
+      <span><%= link_to kitten.name, kitten, class: "info-btn" %></span> | 
+      <strong>Age:</strong> 
+      <span><%= kitten.age %></span> | 
+      <strong>Cuteness:</strong> 
+      <span><%= kitten.cuteness %></span> | 
+      <strong>Softness:</strong> 
+      <span><%= kitten.softness %></span> | 
+      <%= link_to "Remove", kitten, method: :delete, class: "delete-btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Kitten", new_kitten_path, class: "create-btn" %>
