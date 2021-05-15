@@ -1,6 +1,8 @@
-<h1>Edit page</h1>
+<h1 class="text-center">Edit Kitten Profile</h1>
 <%= render 'layouts/notice' %>
 
 <%= render 'form' %>
 
-<%= link_to "Cancel", @kitten %>
+<p class="text-center">
+  <%= link_to "Cancel", @kitten, class: "back-btn" %>
+</p>
