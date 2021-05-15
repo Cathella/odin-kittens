@@ -48,7 +48,7 @@ class KittensController < ApplicationController
   def destroy
     @kitten.destroy
     respond_to do |format|
-      format.html { redirect_to @kittens, notice: "Kitten removed" }
+      format.html { redirect_to root_path, notice: "Kitten removed" }
       format.json { head :no_content }
       format.xml { head :no_content }
     end

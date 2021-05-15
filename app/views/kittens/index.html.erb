@@ -1,2 +1,17 @@
-<h1>Display all the kittens</h1>
-<p>These are the kittens</p>
+<h1>All kittens</h1>
+<div>
+  <% @kittens.each do |kitten| %>
+    <p>
+      <span><%= link_to kitten.name, kitten %></span> | 
+      <strong>Age:</strong> 
+      <span><%= kitten.age %></span> | 
+      <strong>Cuteness:</strong> 
+      <span><%= kitten.cuteness %></span> | 
+      <strong>Softness:</strong> 
+      <span><%= kitten.softness %></span> | 
+      <%= link_to "Remove kitten", kitten, method: :delete %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Kitten", new_kitten_path %>
